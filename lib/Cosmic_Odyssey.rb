@@ -1,3 +1,4 @@
+require 'pry'
 require_relative "./Cosmic_Odyssey/version"
 require_relative "./Cosmic_Odyssey/CLI"
 module CosmicOdyssey
