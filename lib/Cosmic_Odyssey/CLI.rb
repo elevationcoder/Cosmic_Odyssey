@@ -46,7 +46,10 @@ class CosmicOdyssey::CLI
   def show_planet(chosen_planet)
     planet = @planets[chosen_planet-1]
     puts "\n\n\nWelcome to #{planet}!\n\n\n"
-    # binding.pry
+    # CosmicOdyssey::Planet.all.each.with_index(1) do |planet|
+    #   puts planet.name
+    # end
+    #get_user_planets
   end
   
 end
