@@ -4,8 +4,10 @@ class CosmicOdyssey::CLI
     
     #get_planet_info
     puts " ____________________________ "
-    puts "|                            |"  
+    puts "|                            |"
+    puts "|****************************|"
     puts "| Welcome to COSMIC ODYSSEY! |"
+    puts "|****************************|"
     puts "|____________________________|"
     puts
     puts
