@@ -18,6 +18,7 @@ class CosmicOdyssey::CLI
     puts
     get_system_bodies
     get_planets
+    get_user_planets
   end
   
   def get_system_bodies
@@ -27,10 +28,15 @@ class CosmicOdyssey::CLI
   
   def get_planets
     #list planets
-    @planets.each_with_index { |planet, index| 
-      puts "#{index+1} #{planet}"
+    puts "Choose a Planet to see info by selecting corresponding number"
+    @planets.each.with_index(1) { |planet, index| 
+      puts "#{index} #{planet}"
     }
-      
+  end
+  
+  def get_user_planets
+    chosen_planet = gets.strip
+    binding.pry 
   end
   
 end
