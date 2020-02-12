@@ -25,8 +25,8 @@ class CosmicOdyssey::CLI
   
   def get_planets
     #list planets
-    @planets.each_with_index { |index, planet| 
-      puts "#{index} #{planet}"
+    @planets.each_with_index { |planet, index| 
+      puts "#{index+1} #{planet}"
     }
       
   end
