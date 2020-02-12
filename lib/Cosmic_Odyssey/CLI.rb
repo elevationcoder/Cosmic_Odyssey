@@ -3,7 +3,7 @@ class CosmicOdyssey::CLI
   def call 
     
     #get_planet_info
-    puts " ____________________________ "
+    puts " \n ____________________________ \n"
     puts "|                            |"
     puts "|****************************|"
     puts "| Welcome to COSMIC ODYSSEY! |"
@@ -37,6 +37,14 @@ class CosmicOdyssey::CLI
   def get_user_planets
     chosen_planet = gets.strip
     binding.pry 
+    # if valid_input(chosen_planet.to_i, @planets)
+    #end
+      
+      #chosen_planet.to_i <= @planets.length && #chosen_planet.to_i
+  end
+  
+  def valid_input(input, data)
+    input.to_i <= data.length && input.to_i > 0
   end
   
 end
