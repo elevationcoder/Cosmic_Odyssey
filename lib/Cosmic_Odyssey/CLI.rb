@@ -23,7 +23,8 @@ class CosmicOdyssey::CLI
   
   def get_system_bodies
     #will be scraped
-    @planets = ["Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune""\n\n"]
+    # @planets = ["Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune""\n\n"]
+    @planets = CosmicOdyssey::Planet.all
   end
   
   def get_planets

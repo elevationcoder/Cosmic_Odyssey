@@ -1,0 +1,3 @@
+class CosmicOdyssey::Planet
+  
+end

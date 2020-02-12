@@ -11,6 +11,10 @@ Classes
 -SolarSystem
 -CLI
 -Scraper
+
+Today
+get real planets
+allow user to select second planet
   
   
   
