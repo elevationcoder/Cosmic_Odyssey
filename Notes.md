@@ -17,4 +17,7 @@ get real planets
 allow user to select second planet
   
   
+  # @planets = ["Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune""\n\n"]
   
+  #CosmicOdyssey::Planet.new("Mercury")
+    # CosmicOdyssey::Planet.new("Venus")

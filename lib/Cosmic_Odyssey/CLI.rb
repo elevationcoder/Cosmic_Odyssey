@@ -23,15 +23,16 @@ class CosmicOdyssey::CLI
   
   def get_system_bodies
     #will be scraped
-    # @planets = ["Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune""\n\n"]
-    @planets = CosmicOdyssey::Planet.all
+    # 
+    @planets = CosmicOdyssey::Planet.all 
+    # binding.pry 
   end
   
   def get_planets
     #list planets
-    puts "Choose a Planet to start our journey!!\n\n\n"
-    @planets.each.with_index(1) { |planet, index| 
-      puts "#{index} #{planet}"
+    puts "\nChoose a Planet to start our journey!!\n\n\n"
+    @planets.each.with_index(1) { |planet, index, name| 
+      puts "#{index} #{planet.name}"
     }
   end
   
@@ -46,7 +47,7 @@ class CosmicOdyssey::CLI
   
   def show_planet(chosen_planet)
     planet = @planets[chosen_planet-1]
-    puts "\n\n\nWelcome to #{planet}!\n\n\n"
+    puts "\n\n\nWelcome to #{planet.name}!\n\n\n"
     # CosmicOdyssey::Planet.all.each.with_index(1) do |planet|
     #   puts planet.name
     # end
