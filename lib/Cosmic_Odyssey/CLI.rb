@@ -15,16 +15,20 @@ class CosmicOdyssey::CLI
     puts
     puts
     puts
-  # binding.pry
+  
   end
   
   def get_system_bodies
     #will be scraped
-    @planets = ["Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune"]
+    @planets = ["Mercury", "Venus", "Earth", "Mars"]
   end
   
   def get_planets
-    @planets
+    #list planets
+    @planets.each_with_index { |index, planet| 
+      puts "#{index} #{planet}"
+    }
+      
   end
   
 end
