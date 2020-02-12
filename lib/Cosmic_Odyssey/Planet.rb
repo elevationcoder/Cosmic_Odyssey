@@ -18,7 +18,7 @@ class CosmicOdyssey::Planet
   end
   
   def distance_from_sun
-    "Distance from sun: #{dfs || "Irrelevant for this one."}"
+    "\n\nDistance from sun: #{dfs || "Irrelevant for this one.\n\n\n"}\n\n\n"
   end
   
 end
