@@ -28,23 +28,25 @@ class CosmicOdyssey::CLI
   
   def get_planets
     #list planets
-    puts "Choose a Planet to see info by selecting corresponding number"
+    puts "Choose a Planet to start our journey!!"
     @planets.each.with_index(1) { |planet, index| 
       puts "#{index} #{planet}"
     }
   end
   
   def get_user_planets
-    chosen_planet = gets.strip
-    binding.pry 
-    # if valid_input(chosen_planet.to_i, @planets)
-    #end
-      
-      #chosen_planet.to_i <= @planets.length && #chosen_planet.to_i
+    chosen_planet = gets.strip.to_i
+    show_planet(chosen_planet) if valid_input(chosen_planet.to_i, @planets)
   end
   
   def valid_input(input, data)
     input.to_i <= data.length && input.to_i > 0
+  end
+  
+  def show_planet(chosen_planet)
+    planet = @planets[chosen_planet-1]
+    puts "Welcome to #{planet}!"
+    # binding.pry
   end
   
 end
