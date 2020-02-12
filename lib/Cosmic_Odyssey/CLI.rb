@@ -3,19 +3,20 @@ class CosmicOdyssey::CLI
   def call 
     
     #get_planet_info
-    puts " \n ____________________________ \n"
-    puts "|                            |"
-    puts "|****************************|"
-    puts "| Welcome to COSMIC ODYSSEY! |"
-    puts "|****************************|"
-    puts "|____________________________|"
-    puts
-    puts
-    puts
-    puts  "--------START  EXIT----------"
-    puts
-    puts
-    puts
+    puts <<~DOC
+      ____________________________ 
+     |                            |
+     |****************************|
+     | Welcome to COSMIC ODYSSEY! |
+     |****************************|
+     |____________________________|
+    
+    
+    
+      --------START  EXIT----------
+    
+    
+    DOC
     get_system_bodies
     get_planets
     get_user_planets
@@ -49,8 +50,10 @@ class CosmicOdyssey::CLI
     planet = @planets[chosen_planet-1]
     puts "\n\n\nWelcome to #{planet.name}!\n\n\n"
     CosmicOdyssey::Scraper.update_planet(planet)
-    puts planet.description
-    puts planet.distance_from_sun
+    puts <<~DOC
+     #{planet.description}
+     #{planet.distance_from_sun}
+     DOC
   end
   
   
