@@ -13,13 +13,18 @@ class CosmicOdyssey::CLI
     
     
     
-      --------START  EXIT----------
+     --------START  EXIT----------
     
-    
-    DOC
-    get_system_bodies
-    get_planets
-    get_user_planets
+      
+      DOC
+    @input = ""
+    until @input == "exit"
+      get_system_bodies
+      get_planets
+      get_user_planets
+      seen_enough
+    end
+    goodbye
   end
   
   def get_system_bodies
@@ -55,6 +60,16 @@ class CosmicOdyssey::CLI
      #{planet.distance_from_sun}
      DOC
   end
+  
+  def seen_enough
+    puts "--Seen enough? Type 'exit' to return home--\n", "\n--To see another celestial body hit any key.--"
+    @input = gets.strip
+  end 
+  
+  def goodbye
+    puts "See you next time on...COSMIC ODYSSEY!!"
+  end 
+
   
   
   

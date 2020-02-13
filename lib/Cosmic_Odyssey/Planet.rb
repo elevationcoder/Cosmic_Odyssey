@@ -1,5 +1,5 @@
 class CosmicOdyssey::Planet
-  attr_accessor :name, :dfs, :description, :url
+  attr_accessor :name, :dfs, :description, :url, :fun_fact
   
   def initialize(name)
     @name = name
@@ -18,7 +18,9 @@ class CosmicOdyssey::Planet
   end
   
   def distance_from_sun
-    "\n\nDistance from sun: #{dfs || "Irrelevant for this one.\n\n\n"}\n\n\n"
+    "\n\nDistance from sun: #{dfs || "Irrelevant for this one.\n"}\n"
   end
+  
+  
   
 end
