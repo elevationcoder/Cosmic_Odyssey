@@ -58,7 +58,13 @@ class CosmicOdyssey::CLI
     puts <<~DOC
      #{planet.description}
      #{}
-     #{planet.brief_history}
+     #{planet.brief_history_0}
+     #{}
+     #{planet.brief_history_2}
+     #{}
+     #{planet.brief_history_3}
+     #{}
+     #{planet.brief_history_4}
      #{}
      #{planet.fun_fact}
      
