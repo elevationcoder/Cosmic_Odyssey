@@ -58,8 +58,10 @@ class CosmicOdyssey::CLI
     puts <<~DOC
      #{planet.description}
      #{}
+     #{planet.brief_history}
+     #{}
      #{planet.fun_fact}
-     #{planet.distance_from_sun}
+     
      DOC
   end
   

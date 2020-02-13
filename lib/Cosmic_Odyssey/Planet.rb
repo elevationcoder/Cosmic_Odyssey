@@ -1,5 +1,5 @@
 class CosmicOdyssey::Planet
-  attr_accessor :name, :dfs, :description, :url, :fun_fact
+  attr_accessor :name, :dfs, :description, :url, :fun_fact, :brief_history
   
   def initialize(name)
     @name = name
