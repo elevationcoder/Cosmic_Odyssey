@@ -56,6 +56,7 @@ class CosmicOdyssey::CLI
     puts "\n\n\nWelcome to #{planet.name}!\n\n\n"
     CosmicOdyssey::Scraper.update_planet(planet)
     puts <<~DOC
+     #{planet.fun_fact}
      #{planet.description}
      #{planet.distance_from_sun}
      DOC

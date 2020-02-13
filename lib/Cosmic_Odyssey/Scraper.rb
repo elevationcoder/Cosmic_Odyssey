@@ -19,12 +19,12 @@ class CosmicOdyssey::Scraper
     page = Nokogiri::HTML(open(site))
     
     planet.description = page.css('div.hero h2').text
-    planet.fun_fact = page.css().text
+    planet.fun_fact = page.css('div.entry-content p').first.text
   # binding.pry
     if page.css("tr.ninja_table_row_4 td")[0].text == "Orbit Distance:"
       planet.dfs = page.css("tr.ninja_table_row_4 td")[1].text
-    elsif
-      planet.fun_fact = page.css().text
+    # elsif
+    #   planet.fun_fact = page.css('div.inside-article div.entry-content p').first.text
     end
   end
   

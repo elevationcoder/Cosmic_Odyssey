@@ -3,6 +3,7 @@ class CosmicOdyssey::Planet
   
   def initialize(name)
     @name = name
+    
     save
   end
   
@@ -20,6 +21,10 @@ class CosmicOdyssey::Planet
   def distance_from_sun
     "\n\nDistance from sun: #{dfs || "Irrelevant for this one.\n"}\n"
   end
+  
+  # def fun_fact
+  #   "Short History: #{fun_fact}"
+  # end
   
   
   
