@@ -11,7 +11,24 @@ class CosmicOdyssey::CLI
      |****************************|
      |____________________________|
     
-    
+     Our solar system is a an
+     amazing amphitheater full of 
+     all sorts of amazing and 
+     interesting things, that we 
+     have yet to explore. However,
+     we as people still know a fair
+     amount of cool and fun things
+     to learn! Sit back, relax and
+     have fun on your...
+     
+     ****** COSMIC ODYSSEY!! ******
+     
+     
+     To continue to another page, 
+     follow the instructions at the
+     bottom of each page.
+     
+     
     
      --------START  EXIT----------
     
@@ -43,6 +60,7 @@ class CosmicOdyssey::CLI
       get_user_planets
       seen_enough
     end
+    goodbye
   end
   
   def get_system_bodies
@@ -54,7 +72,7 @@ class CosmicOdyssey::CLI
   
   def get_planets
     #list planets
-    puts "\nChoose a Planet to start our journey!!\n\n\n"
+    puts "\n\n\nChoose a Planet, by typing in the number corresponding to the planet", "to start our journey!!\n\n\n"
     @planets.each.with_index(1) { |planet, index, name| 
       puts "#{index}. #{planet.name}"
     }
@@ -104,7 +122,7 @@ class CosmicOdyssey::CLI
   end 
   
   def goodbye
-    puts "See you next time on...COSMIC ODYSSEY!!"
+    puts "\n\nSEE YOU NEXT TIME ON...COSMIC ODYSSEY!!"
   end 
 
   
