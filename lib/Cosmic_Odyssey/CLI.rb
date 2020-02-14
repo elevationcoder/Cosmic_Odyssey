@@ -16,11 +16,13 @@ class CosmicOdyssey::CLI
      --------START  EXIT----------
     
       DOC
+      puts "Type START to start or EXIT to exit"
       start_or_exit
     end
     
     def start_or_exit
       user_input = gets.strip
+      user_input = user_input.downcase
       
       case user_input
         when "start"
@@ -28,6 +30,7 @@ class CosmicOdyssey::CLI
         when "exit"
           goodbye
         else
+          puts " Incorrect selection! Try it again!"
           start_or_exit
       end
     end
@@ -59,7 +62,16 @@ class CosmicOdyssey::CLI
   
   def get_user_planets
     chosen_planet = gets.strip.to_i
-    show_planet(chosen_planet) if valid_input(chosen_planet.to_i, @planets)
+    if chosen_planet < 1 || chosen_planet > @planets.size
+      puts "Incorrect selection! Try again!"
+      # binding.pry
+      get_user_planets
+    else
+      
+      show_planet(chosen_planet) if valid_input(chosen_planet.to_i, @planets)
+      
+      # binding.pry
+    end
   end
   
   def valid_input(input, data)
