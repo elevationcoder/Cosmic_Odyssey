@@ -19,7 +19,7 @@ class CosmicOdyssey::Scraper
     page = Nokogiri::HTML(open(site))
     
     planet.description = page.css('div.hero h2').text
-    planet.fun_fact = page.css('aside.data-table-widget tbody tr').text
+    planet.fun_fact = page.css('aside.data-table-widget tbody tr').text.split(":").join(": ")
     planet.brief_history_0 = page.css('div.entry-content p')[0].text
     planet.brief_history_2 = page.css('div.entry-content p')[2].text
     planet.brief_history_3 = page.css('div.entry-content p')[3].text
