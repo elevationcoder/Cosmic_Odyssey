@@ -22,7 +22,15 @@ class CosmicOdyssey::CLI
     def start_or_exit
       user_input = gets.strip
       
-      case
+      case user_input
+        when "start"
+          start_app
+        when "exit"
+          goodbye
+        else
+          start_or_exit
+      end
+    end
     
     def start_app
     @input = ""
