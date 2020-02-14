@@ -15,8 +15,16 @@ class CosmicOdyssey::CLI
     
      --------START  EXIT----------
     
-      
       DOC
+      start_or_exit
+    end
+    
+    def start_or_exit
+      user_input = gets.strip
+      
+      case
+    
+    def start_app
     @input = ""
     until @input == "exit"
       get_system_bodies
@@ -24,7 +32,6 @@ class CosmicOdyssey::CLI
       get_user_planets
       seen_enough
     end
-    goodbye
   end
   
   def get_system_bodies
