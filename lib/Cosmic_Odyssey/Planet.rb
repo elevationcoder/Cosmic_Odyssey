@@ -22,10 +22,5 @@ class CosmicOdyssey::Planet
     "\n\nDistance from sun: #{dfs || "Irrelevant for this one.\n"}\n"
   end
   
-  # def fun_fact
-  #   "Short History: #{fun_fact}"
-  # end
-  
-  
   
 end

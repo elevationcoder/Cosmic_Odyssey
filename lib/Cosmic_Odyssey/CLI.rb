@@ -1,8 +1,6 @@
 class CosmicOdyssey::CLI 
   
   def call 
-    
-    #get_planet_info
     puts <<~DOC
       ____________________________ 
      |                            |
@@ -64,10 +62,7 @@ class CosmicOdyssey::CLI
   end
   
   def get_system_bodies
-    #will be scraped
-    
     @planets = CosmicOdyssey::Planet.all 
-    # binding.pry 
   end
   
   def get_planets
@@ -85,10 +80,7 @@ class CosmicOdyssey::CLI
       # binding.pry
       get_user_planets
     else
-      
       show_planet(chosen_planet) if valid_input(chosen_planet.to_i, @planets)
-      
-      # binding.pry
     end
   end
   
@@ -112,7 +104,6 @@ class CosmicOdyssey::CLI
      #{planet.brief_history_4}
      #{}
      #{planet.fun_fact}
-     
      DOC
   end
   
@@ -125,7 +116,4 @@ class CosmicOdyssey::CLI
     puts "\n\nSEE YOU NEXT TIME ON...COSMIC ODYSSEY!!"
   end 
 
-  
-  
-  
 end

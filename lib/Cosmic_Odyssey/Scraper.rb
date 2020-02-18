@@ -4,7 +4,6 @@ class CosmicOdyssey::Scraper
     site = "#{BASE_URL}kids/"
 
     page = Nokogiri::HTML(open(site))
-    # puts page
     planets = page.css("ul.planets-thumbnail-list li")
     
     planets.each do |p|
@@ -24,7 +23,6 @@ class CosmicOdyssey::Scraper
     planet.brief_history_2 = page.css('div.entry-content p')[2].text
     planet.brief_history_3 = page.css('div.entry-content p')[3].text
     planet.brief_history_4 = page.css('div.entry-content p')[4].text
-  # binding.pry
     if page.css("tr.ninja_table_row_4 td")[0].text == "Orbit Distance:"
       planet.dfs = page.css("tr.ninja_table_row_4 td")[1].text
     end
